@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: poppins;
+    color: var(--white-color);
+    list-style: none;
+    text-decoration: none;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--secondary-color);
+}
+/* .hero{
+  background-image: linear-gradient(to right rgba(236, 234, 236, 0.178), rgba(236, 234, 234, 0.178)), url('./steve-img/steve.png');
+  background-size: 100%;
+} */
+
+.header-text{
+    
+    /* margi */
+    @media (max-width: 600px) {
+      margin-top: 6rem;
+      height: 300px;
+      background-image: none;
+    }}
+
+:root{
+    --primary-color: #069B77;
+    --secondary-color: #2C2E31;
+    --white-color: #fff;
+    --lg-width: 85%;
+    --sm-width: 95%;
+    --tertiary-color: #353E3C;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+h3{
+    font-size: 32px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  p{
+    font-size: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  small{
+    font-size: 16px;
+    margin: 1rem 0;
   }
+
+  
+  .serve{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .btn{
+    display: flex;
+  }
+
+  .btn button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 9px;
+    padding: 12px 30px;
+    margin-top: 10px;
+  }
+
+  ul{
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+    /* position: absolute; */
+    align-items: center;
+  }
+
+  .ham{
+    display: none;
+  }
+
+  
+
+
+
+
+@media screen and (max-width: 480px) {
+    h3{
+        font-size: 28px;
+      }
+    
+      p{
+        font-size: 17px;
+      }
+    
+      small{
+        font-size: 14px;
+        
+      }
+
+      .container{
+        width: 90%;
+    }
+
+    .serve{
+        width: 98%;
+        margin: 0 auto;
+      }
+
+      
+
+      ul{
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--tertiary-color);
+        z-index: 1;
+        top: 50px;
+        left: 0;
+      }
+      li{
+        padding-left: 10px;
+        padding-top: 1rem;
+      }
+
+      li:last-child{
+        padding-bottom: 1rem;
+      }
+
+      .ham{
+        display: block;
+      }
+
+
 }

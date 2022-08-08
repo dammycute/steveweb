@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import About from "./component/About";
+import Footer from "./component/Footer";
+import Hero from "./component/Hero"
+import Portfolio from "./component/Portfolio";
+import Service from "./component/Service";
+import Touch from "./component/Touch";
+// import styled from 'styled-components'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<React.Fragment>
+			
+			<div className="container">
+				<Hero />
+				<About />
+				<Service />
+				<Portfolio />
+				<Touch />
+
+				{/* <Royal/> */}
+			</div>
+			<Footer />
+		</React.Fragment>
+	);
 }
 
 export default App;
